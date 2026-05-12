@@ -1,11 +1,10 @@
 # MimicArm-dual_arm_teleop
-# 🤖 Dual Arm Teleoperation — ROS 2 Humble
 
 Control two 6DOF robot arms in real time using nothing but your hands and a webcam.
 
 Built with **ROS 2 Humble**, **MediaPipe**, and **MoveIt 2**. Visualised in **RViz**.
 
----
+
 
 ## Demo
 
@@ -14,7 +13,7 @@ Built with **ROS 2 Humble**, **MediaPipe**, and **MoveIt 2**. Visualised in **RV
 ![Dual Arm Teleoperation](docs/demo.gif)
 <!-- Record a screen capture of RViz and save as docs/demo.gif -->
 
----
+
 
 ## Overview
 
@@ -27,7 +26,7 @@ The system maps:
 
 The robot model, joint states, and all motion are visualised live in RViz. The `/joint_states` topic is published at 30 Hz, allowing a real robot to subscribe and follow directly.
 
----
+
 
 ## System Architecture
 
@@ -62,7 +61,7 @@ The robot model, joint states, and all motion are visualised live in RViz. The `
                               └─────────────────────────────────┘
 ```
 
----
+
 
 ## Features
 
@@ -76,7 +75,7 @@ The robot model, joint states, and all motion are visualised live in RViz. The `
 - **Hold-on-loss** — arms hold last position when hands leave the frame
 - **30 Hz joint state publishing** — compatible with real robot controllers
 
----
+
 
 ## Gesture Controls
 
@@ -89,7 +88,7 @@ The robot model, joint states, and all motion are visualised live in RViz. The `
 | Release pinch | Open right gripper |
 | Same gestures, left hand | Controls left arm + left gripper |
 
----
+
 
 ## Prerequisites
 
@@ -132,7 +131,7 @@ pip install colcon-common-extensions
 pip install "numpy<2" "mediapipe==0.10.9" opencv-python
 ```
 
----
+
 
 ## Installation
 
@@ -158,7 +157,7 @@ source ~/miniforge3/envs/ros2/setup.zsh
 source ~/ros2_ws/install/local_setup.zsh
 ```
 
----
+
 
 ## Running
 
@@ -188,7 +187,7 @@ ros2 launch dual_arm_teleop dual_arm_teleop_full.launch.py use_moveit:=true
 | `use_moveit` | `true` | Enable MoveIt 2 planning (full launch only) |
 | `launch_rviz` | `true` | Launch RViz visualisation |
 
----
+
 
 ## Expected Output
 
@@ -213,7 +212,7 @@ When launched successfully you will see:
 - `/left_arm/ee_target_pose` and `/right_arm/ee_target_pose` updating with hand position
 - `/left_arm/gripper_close` and `/right_arm/gripper_close` toggling on pinch
 
----
+
 
 ## Project Structure
 
@@ -240,7 +239,7 @@ dual_arm_teleop/
     └── dual_arm_robot.urdf.xacro       # Dual 6DOF arms + two-finger grippers
 ```
 
----
+
 
 ## Noise Handling Design
 
@@ -253,7 +252,7 @@ dual_arm_teleop/
 | **Hold-on-loss** | Arms hold last position when hands leave the frame |
 | **Single-operator lock** | Only first detected hand per side is tracked |
 
----
+
 
 ## Troubleshooting
 
@@ -267,7 +266,7 @@ dual_arm_teleop/
 | `NumPy 2.x error` | `pip install "numpy<2"` |
 | `NSWindow main thread error (macOS)` | Set `show_preview:=false` in launch args |
 
----
+
 
 ## References
 
@@ -277,7 +276,7 @@ dual_arm_teleop/
 - [RoboStack](https://robostack.github.io) — ROS 2 conda packages for macOS/Windows
 - Kinematic link lengths inspired by Universal Robots arm geometry — no UR source code used
 
----
+
 
 ## License
 
