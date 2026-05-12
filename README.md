@@ -17,7 +17,7 @@ Built with **ROS 2 Humble**, **MediaPipe**, and **MoveIt 2**. Visualised in **RV
 
 ## Overview
 
-This project implements a complete hand-gesture teleoperation system for a dual 6DOF robot arm setup. An operator stands in front of a standard RGB webcam — no depth camera required — and controls both robot arms simultaneously using natural hand movements.
+This project implements a complete hand-gesture teleoperation system for a dual 6DOF robot arm setup. An operator stands in front of a standard RGB webcam no depth camera required and controls both robot arms simultaneously using natural hand movements.
 
 The system maps:
 - **Hand position (X, Y)** → End-effector position in the robot workspace
