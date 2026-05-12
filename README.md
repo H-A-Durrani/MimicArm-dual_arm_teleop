@@ -201,7 +201,7 @@ When launched successfully you will see:
 [rviz2] OpenGl version: 2.1
 ```
 
-<img src="output.png" alt="output" width="300"/>
+<img src="output.png" alt="output" width="600"/>
 
 **RViz window:**
 - A shared base platform with two robot arms — blue (left) and orange (right)
